@@ -1,0 +1,14 @@
+<div id="center">
+  <h2>正在进行<span>0</span></h2>
+  <ol>
+    <li *ngFor="let item of arrData;let idx = index;">
+      <input type="checkbox" (change)="bian(idx)"><p>{{item}}</p><a (click)="del(idx)">删除</a>
+    </li>
+  </ol> 
+  <h2>已经完成<span>0</span></h2>
+  <ol>
+    <li *ngFor="let item of arrData1;let idx = index;">
+      <input type="checkbox" checked (change)="bian1(idx)"><p>{{item}}</p><a (click)="del1(idx)">删除</a>
+    </li>
+  </ol>
+</div>
