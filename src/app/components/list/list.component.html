@@ -1,14 +1,14 @@
 <div id="center">
-  <h2>正在进行<span>0</span></h2>
+  <h2>正在进行<span>{{storage.arrdata1.length}}</span></h2>
   <ol>
-    <li *ngFor="let item of arrData;let idx = index;">
-      <input type="checkbox" (change)="bian(idx)"><p>{{item}}</p><a (click)="del(idx)">删除</a>
+    <li *ngFor="let item of storage.arrdata1;let idx = index;">
+      <input type="checkbox" (change)="storage.changeone(idx)"><p>{{item}}</p><a (click)="storage.removeone(idx)">删除</a>
     </li>
   </ol> 
-  <h2>已经完成<span>0</span></h2>
+  <h2>已经完成<span>{{storage.arrdata2.length}}</span></h2>
   <ol>
-    <li *ngFor="let item of arrData1;let idx = index;">
-      <input type="checkbox" checked (change)="bian1(idx)"><p>{{item}}</p><a (click)="del1(idx)">删除</a>
+    <li *ngFor="let item of storage.arrdata2;let idx = index;">
+      <input type="checkbox" checked (change)="storage.changetwo(idx)"><p>{{item}}</p><a (click)="storage.removetwo(idx)">删除</a>
     </li>
   </ol>
 </div>

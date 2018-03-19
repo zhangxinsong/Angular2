@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { InputComponent } from './components/input/input.component';
 import { ListComponent } from './components/list/list.component';
 
+import { StorageService } from './services/storage.service';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,7 @@ import { ListComponent } from './components/list/list.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

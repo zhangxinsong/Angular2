@@ -35,14 +35,16 @@ export class AppComponent {
   // del1(i){
   //   this.arrData1.splice(i,1);
   // }
-  arr = [];
 
-  value:any;
+  
+  // arr = [];
 
-  getValue(i){
-    this.value = i;
-    this.arr.push(i);
-  }
+  // value:any;
+
+  // getValue(i){
+  //   this.value = i;
+  //   this.arr.push(i);
+  // }
 
 
 

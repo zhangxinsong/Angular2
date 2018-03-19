@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
+import { StorageService } from '../../services/storage.service';
 
 @Component({
   selector: 'app-input',
@@ -7,16 +8,24 @@ import { Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 })
 export class InputComponent implements OnInit {
 
-  constructor() { }
+  constructor(public storage:StorageService) {}
 
   ngOnInit() {
   }
-  @Input() txt;
 
-  @Output() value = new EventEmitter<any>();
+  //利用@Output传值
+  // @Input() txt;
 
-  fn(i){
-    this.value.emit(i);
+  // @Output() value = new EventEmitter<any>();
+
+  // fn(i){
+  //   this.value.emit(i);
+  //   this.txt = "";
+  // }
+
+  txt:any
+
+  cleartxt(){
     this.txt = "";
   }
 }
