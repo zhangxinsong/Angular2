@@ -1,0 +1,39 @@
+ul,li{
+    list-style: none;
+}
+li{
+    width: 40%;
+    font-size: 30px;
+    float: left;
+    margin: 5%;
+    height: 100px;
+    background: rgb(25, 214, 34);
+}
+#content{
+    overflow:hidden;
+}
+.img-div img:hover{
+    border: 1px goldenrod solid;
+}
+.img-div img{
+    width: 100px;
+    height: 150px;
+}
+.goodlist{
+    width: 120px;
+    height: 200px;
+    display: inline-block;
+    margin: 0 10px 0 10px;
+}
+.goodlist span{
+    width: 100px;
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space:nowrap;
+    display:block;
+}
+.goodlist span:hover{
+    color: goldenrod;
+}

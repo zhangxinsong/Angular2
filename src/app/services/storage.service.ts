@@ -5,8 +5,8 @@ export class StorageService {
 
   constructor() { }
 
-  arrdata1:Array<any> = JSON.parse(localStorage.getItem("doing"))
-  arrdata2:Array<any> = JSON.parse(localStorage.getItem("finish"))
+  arrdata1:Array<any>
+  arrdata2:Array<any>
 
   storageData(i){
     this.arrdata1.push(i);
@@ -41,5 +41,19 @@ export class StorageService {
     localStorage.setItem("finish",JSON.stringify(this.arrdata2));
     console.log(this.arrdata1);
     console.log(this.arrdata2);
+  }
+  arr1(){
+    if(JSON.parse(localStorage.getItem("doing"))){
+      this.arrdata1 = JSON.parse(localStorage.getItem("doing"));
+    }else{
+      this.arrdata1 = [];
+    }
+  }
+  arr2(){
+    if(JSON.parse(localStorage.getItem("finish"))){
+      this.arrdata2 = JSON.parse(localStorage.getItem("finish"));
+    }else{
+      this.arrdata2 = [];
+    }
   }
 }

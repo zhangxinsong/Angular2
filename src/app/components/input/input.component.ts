@@ -11,6 +11,8 @@ export class InputComponent implements OnInit {
   constructor(public storage:StorageService) {}
 
   ngOnInit() {
+    this.storage.arr1();
+    this.storage.arr2();
   }
 
   //利用@Output传值

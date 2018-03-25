@@ -1,5 +1,5 @@
 <div id="center">
-  <h2>正在进行<span>{{storage.arrdata1.length}}</span></h2>
+  <h2 data-ng-init="storage.arr()">正在进行<span>{{storage.arrdata1.length}}</span></h2>
   <ol>
     <li *ngFor="let item of storage.arrdata1;let idx = index;">
       <input type="checkbox" (change)="storage.changeone(idx)"><p>{{item}}</p><a (click)="storage.removeone(idx)">删除</a>

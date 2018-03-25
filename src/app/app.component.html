@@ -15,7 +15,11 @@
     </li>
   </ul> -->
 
-  <app-input></app-input>
-  <app-list></app-list>
+  
+  <router-outlet></router-outlet>
+  <a routerLink="/a">a</a>
+  <a routerLink="/b">b</a>
+  <a [routerLink]="['/home/',100]">home</a>
+  <a routerLink="/goodslist" [queryParams]="{aa:100}">goodslist</a>
 </div>
 
